@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shifa Noorani | Software Engineering Student</title>
+<meta name="description" content="Portfolio of Shifa Noorani, a BS Software Engineering student at the University of Sindh building web and mobile applications with PHP, MySQL, JavaScript and Flutter.">
+<meta name="theme-color" content="#07050d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shifa Noorani | Software Engineering Student">
+<meta property="og:description" content="Practical web and mobile projects with PHP, MySQL, JavaScript and Flutter.">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Shifa Noorani","description":"BS Software Engineering student at the University of Sindh","alumniOf":{"@type":"CollegeOrUniversity","name":"University of Sindh"},"sameAs":["https://github.com/ShifaNoorani","https://www.linkedin.com/in/shifa-noorani-a7591639b/"]}</script>
+<script>
+(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}
+if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";
+document.documentElement.dataset.theme=t;document.documentElement.classList.add("js")})();
+</script>
+<style>
+:root{--bg:#07050d;--bg2:#0f0a1c;--card:rgba(255,255,255,.045);--bd:rgba(167,139,250,.24);--tx:#f6f1ff;--mu:#b0a5c9;--p:#a78bfa;--k:#f472b6;--g:linear-gradient(110deg,#a78bfa,#f472b6);--gb:linear-gradient(110deg,#7c3aed,#db2777);--h1:rgba(124,58,237,.30);--h2:rgba(236,72,153,.18);--sh:0 18px 50px -20px rgba(124,58,237,.55);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme=light]{--bg:#faf7ff;--bg2:#f1eaff;--card:#fff;--bd:rgba(109,40,217,.16);--tx:#1c1330;--mu:#574a70;--p:#6d28d9;--k:#be185d;--g:linear-gradient(110deg,#6d28d9,#be185d);--h1:rgba(139,92,246,.16);--h2:rgba(244,114,182,.16);--sh:0 14px 34px -18px rgba(76,29,149,.28);color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(5rem + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{margin:0;font:400 1rem/1.7 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--tx);background:radial-gradient(60rem 28rem at 12% -4%,var(--h1),transparent),radial-gradient(44rem 26rem at 96% 6%,var(--h2),transparent),var(--bg);background-attachment:fixed;overflow-x:hidden;transition:background-color .3s,color .3s}
+h1,h2,h3,h4{font-family:Sora,Inter,system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--k);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:1rem;top:-4rem;background:var(--bg2);padding:.6rem 1rem;border-radius:8px;z-index:100}.skip:focus{top:1rem}
+.wrap{width:min(1100px,100% - 2.5rem);margin-inline:auto}
+section{padding:5rem 0}
+.eyebrow{font:600 .78rem/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:.9rem;display:block}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:2rem}
+.grad{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid var(--bd)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4rem}
+.logo{font:800 1.15rem Sora,sans-serif;text-decoration:none}
+nav ul{display:flex;gap:.2rem;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:.5rem .65rem;border-radius:999px;text-decoration:none;color:var(--mu);font-size:.92rem;font-weight:500;transition:.2s}
+nav a:hover,nav a[aria-current=true]{color:var(--tx);background:var(--card)}
+.tools{display:flex;gap:.5rem;align-items:center}
+.ib{width:2.6rem;height:2.6rem;display:grid;place-items:center;border-radius:50%;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer;font-size:1.1rem}
+.ib:hover{box-shadow:var(--sh)}#menu{display:none}
+.hero{padding:6rem 0 4.5rem}
+.hero h1{font-size:clamp(2.6rem,8vw,5rem);letter-spacing:-.03em;margin:.4rem 0 1.2rem}
+.lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--mu);max-width:40rem;margin:0 0 2rem}
+.row{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.btn.pri{background:var(--gb);color:#fff;border-color:transparent}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.chips li{font:500 .8rem "SFMono-Regular",Consolas,monospace;padding:.3rem .75rem;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--mu)}
+.hero .chips{margin-top:2.4rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:1.5rem;box-shadow:var(--sh)}
+.about p{font-size:1.12rem;max-width:46rem;margin:0 0 1.5rem}
+.grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.card h3{font-size:1.05rem;margin-bottom:1rem}
+.proj{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.proj .card{display:flex;flex-direction:column;gap:1rem;transition:transform .25s,border-color .25s}
+.proj .card:hover{transform:translateY(-4px);border-color:var(--p)}
+.pv{aspect-ratio:16/9;border-radius:14px;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;font:700 clamp(1.8rem,5vw,2.8rem) "SFMono-Regular",Consolas,monospace}
+.pv small{position:absolute;left:.8rem;bottom:.6rem;font:500 .7rem Inter,sans-serif;opacity:.85}
+.pv img{width:100%;height:100%;object-fit:cover}
+.card h3.pt{font-size:1.3rem;margin:0}
+.card p{margin:0;color:var(--mu)}
+.compact{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.ghl{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;gap:.75rem}
+.ghl li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1rem;padding:1rem 1.25rem;border:1px solid var(--bd);border-radius:14px;background:var(--card)}
+.ghl a{font-weight:600}.ghl span{color:var(--mu);font-size:.9rem}
+ol.tl{list-style:none;margin:0;padding:0 0 0 1.6rem;border-left:2px solid var(--bd);display:grid;gap:1.5rem}
+ol.tl li{position:relative}
+ol.tl li::before{content:"";position:absolute;left:-2.2rem;top:.45rem;width:.85rem;height:.85rem;border-radius:50%;background:var(--g);box-shadow:0 0 0 4px var(--bg)}
+ol.tl h3{font-size:1.1rem;margin-bottom:.3rem}ol.tl p{margin:0 0 .6rem;color:var(--mu)}
+.note{color:var(--mu);font-size:.9rem;margin-top:1.5rem}
+.cta{text-align:center}.cta .row{justify-content:center}.cta p{color:var(--mu);max-width:36rem;margin:0 auto 1.8rem}
+footer{border-top:1px solid var(--bd);padding:2rem 0;color:var(--mu);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+footer a{margin-right:1rem}
+dialog{width:min(640px,calc(100% - 2rem));max-height:88vh;overflow:auto;border:1px solid var(--bd);border-radius:20px;background:var(--bg2);color:var(--tx);padding:1.8rem}
+dialog::backdrop{background:rgba(5,2,12,.7);backdrop-filter:blur(4px)}
+dialog h3{font-size:1.5rem;margin-bottom:.8rem}dialog h4{margin:1.2rem 0 .5rem;font-size:1rem}
+dialog ul.f{margin:0 0 1rem;padding-left:1.2rem;color:var(--mu)}dialog .row{margin-top:1.4rem}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+.sk{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.ex{border-style:dashed;box-shadow:none;background:transparent;margin-top:1.25rem}.ex p{margin:0 0 1rem;font-size:.92rem}
+.xh{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.3rem 1rem;margin-bottom:.3rem}.xh h3{font-size:1.3rem;margin:0}
+.when{color:var(--p);font-weight:600;font-size:.9rem}.card p.org{color:var(--tx);margin:0 0 1rem}
+ul.fl{margin:0 0 1rem;padding-left:1.2rem;color:var(--mu)}ul.fl li{margin-bottom:.45rem}.card p.nt{font-size:.88rem;margin:0}
+.card p.cid{font-size:.85rem}.cid span{font-family:"SFMono-Regular",Consolas,monospace;color:var(--tx)}
+@media(max-width:1100px){#menu{display:grid}
+nav{position:absolute;left:0;right:0;top:100%;background:var(--bg2);border-bottom:1px solid var(--bd);display:none;padding:.5rem 1.25rem 1rem}
+nav.open{display:block}nav ul{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<div class="wrap bar">
+<a class="logo" href="#top" aria-label="Shifa Noorani, home"><span class="grad">Shifa Noorani</span></a>
+<nav id="nav" aria-label="Main">
+<ul>
+<li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li>
+<li><a href="#github">GitHub</a></li><li><a href="#journey">Journey</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#certifications">Certifications</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<div class="tools">
+<button class="ib" id="theme" type="button" aria-label="Switch theme"><span aria-hidden="true" id="ticon">☾</span></button>
+<button class="ib" id="menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span aria-hidden="true">☰</span></button>
+</div>
+</div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+<div class="wrap">
+<span class="eyebrow">BS Software Engineering · University of Sindh</span>
+<h1><span class="grad">Shifa Noorani</span></h1>
+<p class="lead">Software Engineering student building practical web and mobile applications with PHP, MySQL, JavaScript, and Flutter.</p>
+<div class="row">
+<a class="btn pri" href="#projects">View projects</a>
+<a class="btn" data-cv href="Shifa-Noorani-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="View CV (PDF, opens in new tab)">View CV</a>
+<a class="btn" href="https://github.com/ShifaNoorani" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/shifa-noorani-a7591639b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+<ul class="chips" aria-label="Core technologies"><li>PHP</li><li>MySQL</li><li>JavaScript</li><li>Flutter</li><li>Dart</li></ul>
+</div>
+</section>
+
+<section class="about rv" id="about">
+<div class="wrap">
+<span class="eyebrow">About</span><h2>About me</h2>
+<p>I'm a BS Software Engineering student at the University of Sindh, Jamshoro. I enjoy building practical software, from database-driven web applications to mobile interfaces. Through my university and personal projects, I'm developing hands-on skills in web development, databases, and Flutter. I'm continuously learning and working toward becoming a skilled software developer. I'm also exploring product management, UX, requirements gathering, and AI-assisted workflows as I develop a broader understanding of how software products are planned and built.</p>
+</div>
+</section>
+
+<section class="rv" id="skills">
+<div class="wrap">
+<span class="eyebrow">Skills</span><h2>What I work with</h2>
+<div class="grid sk">
+<div class="card"><h3>Programming</h3><ul class="chips"><li>Java</li><li>C++</li><li>Python</li><li>JavaScript</li><li>PHP</li><li>Dart</li></ul></div>
+<div class="card"><h3>Web development</h3><ul class="chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>jQuery</li><li>Bootstrap</li><li>Responsive web design</li><li>Full-stack development</li><li>Form validation</li><li>Sessions &amp; role-based access</li></ul></div>
+<div class="card"><h3>Database</h3><ul class="chips"><li>MySQL</li><li>MariaDB</li></ul></div>
+<div class="card"><h3>Mobile development</h3><ul class="chips"><li>Flutter</li><li>Dart</li><li>Mobile application development</li></ul></div>
+<div class="card"><h3>Software engineering</h3><ul class="chips"><li>Object-oriented programming</li><li>SDLC</li><li>Systems design</li><li>Requirements gathering</li><li>Git &amp; GitHub</li></ul></div>
+</div>
+<div class="card ex rv"><h3>Currently exploring</h3><p>Areas I'm interested in and learning about, not professional experience.</p><ul class="chips"><li>Artificial intelligence</li><li>Generative AI</li><li>Prompt engineering</li><li>AI-assisted development</li><li>AI productivity tools</li><li>Data analysis</li><li>Responsible AI</li><li>UX</li><li>Product management</li><li>Product strategy</li><li>Agile methodologies</li></ul></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="wrap">
+<div class="rv"><span class="eyebrow">Featured projects</span><h2>Featured projects</h2></div>
+<div class="proj" id="featured"></div>
+<div class="rv" style="margin-top:4rem"><span class="eyebrow">More work</span><h2>Other projects</h2></div>
+<div class="proj compact" id="others"></div>
+<p class="note">Preview graphics are illustrations based on each project's name and technology, not screenshots of the applications.</p>
+</div>
+</section>
+
+<section class="rv" id="github">
+<div class="wrap">
+<span class="eyebrow">GitHub</span><h2>Public repositories</h2>
+<ul class="ghl" id="repos"></ul>
+<a class="btn pri" href="https://github.com/ShifaNoorani" target="_blank" rel="noopener noreferrer">View GitHub profile</a>
+</div>
+</section>
+
+<section class="rv" id="journey">
+<div class="wrap">
+<span class="eyebrow">Development journey</span><h2>How my projects build on each other</h2>
+<ol class="tl">
+<li><h3>Web fundamentals</h3><p>Small front-end projects focused on layout, responsiveness and JavaScript behaviour.</p><ul class="chips"><li>Student Registration Form</li><li>Web Timer</li></ul></li>
+<li><h3>Full-stack web with PHP &amp; MySQL</h3><p>A university software project combining authentication, roles, a relational database and an admin panel.</p><ul class="chips"><li>University Website &amp; Faculty Portal</li></ul></li>
+<li><h3>Mobile interfaces with Flutter</h3><p>A Flutter and Dart app using custom-painted graphics.</p><ul class="chips"><li>Radiant Clock</li></ul></li>
+</ol>
+<p class="note">Grouped by theme, not by date.</p>
+</div>
+</section>
+
+<section class="rv" id="experience">
+<div class="wrap">
+<span class="eyebrow">Experience</span><h2>Development experience</h2>
+<div class="card" style="max-width:46rem">
+<div class="xh"><h3>Student Software Engineer</h3><span class="when">2026 – Present</span></div>
+<p class="org">University of Sindh</p>
+<ul class="fl">
+<li>Building full-stack web projects using HTML, CSS, JavaScript, PHP, jQuery and MySQL.</li>
+<li>Applying object-oriented programming concepts using Java and C++.</li>
+<li>Developing mobile applications while learning Flutter and Dart.</li>
+<li>Working on university software projects and collaborating in team environments.</li>
+<li>Practicing software development, debugging, integration and deployment through coursework and personal projects.</li>
+<li>Developing practical software engineering skills through university projects and self-guided learning.</li>
+</ul>
+<p class="nt">University coursework and self-guided learning, not a corporate or commercial role.</p>
+</div>
+</div>
+</section>
+
+<section class="rv" id="education">
+<div class="wrap">
+<span class="eyebrow">Education</span><h2>Education</h2>
+<div class="card" style="max-width:40rem">
+<h3 style="font-size:1.3rem;margin-bottom:.5rem">BS Software Engineering</h3>
+<p style="margin:0 0 .3rem">University of Sindh, Jamshoro, Sindh, Pakistan</p>
+<p style="margin:0 0 .3rem;color:var(--mu)">Faculty of Engineering &amp; Technology</p>
+<p style="margin:0;color:var(--p);font-weight:600">Currently studying</p>
+</div>
+</div>
+</section>
+
+<section id="certifications">
+<div class="wrap">
+<div class="rv"><span class="eyebrow">Certifications</span><h2>Certifications</h2></div>
+<div class="proj">
+<article class="card rv"><h3 class="pt">Google AI Professional Certificate</h3><p class="org">Google · Issued June 2026</p><p>Completed 7 courses developed by Google. Built a portfolio of 20+ AI-powered artifacts, covering prompt engineering, AI-assisted coding, data analysis, content creation and responsible AI deployment.</p><p class="cid">Credential ID: <span>C9KSR69C8VS0</span></p>
+<div class="row"><a class="btn pri" href="https://www.coursera.org/account/accomplishments/specialization/C9KSR69C8VS0" target="_blank" rel="noopener noreferrer" aria-label="View credential for Google AI Professional Certificate on Coursera (opens in new tab)">View credential</a></div></article>
+<article class="card rv"><h3 class="pt">Google AI Essentials Specialization</h3><p class="org">Google · Issued June 2026</p><p>Completed 5 hands-on courses developed by Google, covering responsible use of AI tools, prompt engineering and improving productivity across workflows with AI.</p><p class="cid">Credential ID: <span>JHJ6YP83RP55</span></p>
+<div class="row"><a class="btn pri" href="https://www.coursera.org/account/accomplishments/specialization/JHJ6YP83RP55" target="_blank" rel="noopener noreferrer" aria-label="View credential for Google AI Essentials Specialization on Coursera (opens in new tab)">View credential</a></div></article>
+</div>
+</div>
+</section>
+
+<section class="rv cta" id="contact">
+<div class="wrap">
+<span class="eyebrow">Contact</span><h2>Let's connect</h2>
+<p>I'm a student looking to learn and grow as a developer. You can find me on GitHub and LinkedIn.</p>
+<div class="row">
+<a class="btn pri" href="https://github.com/ShifaNoorani" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/shifa-noorani-a7591639b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="btn" data-cv href="Shifa-Noorani-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="View CV (PDF, opens in new tab)">View CV</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<span>© <span id="yr"></span> Shifa Noorani</span>
+<span><a href="https://github.com/ShifaNoorani" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/shifa-noorani-a7591639b/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+</div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dt"><div id="dbody"></div><div class="row"><button class="btn" id="dclose" type="button">Close</button></div></dialog>
+
+<script>
+/* ---- EDIT HERE ---------------------------------------------------- */
+var CV_URL = "Shifa-Noorani-CV.pdf";   // keep this PDF in the same folder as index.html (or change the path here)
+var GH = "https://github.com/ShifaNoorani/";
+/* shot: path to a real screenshot (replaces the preview graphic). demo: real live URL (adds Live Demo button) */
+var CLOCK = '<svg viewBox="0 0 100 100" width="104" height="104" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="none" stroke="#f9a8d4" stroke-width="2.5"/><path d="M50 50V20M50 50L70 61" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><circle cx="50" cy="50" r="3.5" fill="#f472b6"/></svg>';
+var PROJECTS = [
+{id:"uni",featured:1,name:"University Website & Faculty Portal",repo:"university-website-php-mysql",lang:"PHP · MySQL",
+ tags:["PHP 8","MySQL / MariaDB","JavaScript (jQuery)","HTML5","CSS3"],c1:"#1a0b3a",c2:"#6d28d9",glyph:"&lt;?php",shot:"",demo:"",
+ blurb:"A university software project (Software Engineering coursework): a PHP and MySQL website with a faculty portal, role-based access and an admin panel.",
+ features:["Login and registration with hashed passwords (password_hash)","Session-based roles: Admin, Teacher, Student","Admin panel for departments, programs, facilities, faculty profiles and user roles","Faculty profile pages with biography, designation and publications","Public directory of departments, programs and facilities","Prepared SQL statements and a relational schema with foreign keys"]},
+{id:"clock",featured:1,name:"Radiant Clock",repo:"radiant-clock-app",lang:"Flutter · Dart",
+ tags:["Flutter","Dart","CustomPainter"],c1:"#12040f",c2:"#be185d",glyph:CLOCK,shot:"",demo:"",
+ blurb:"A mobile app built with Flutter and Dart that shows an analog and a digital clock together in a pink and black theme.",
+ features:["Analog clock hands and digital display shown together in real time","Clock face and hands drawn with Flutter's CustomPainter","Modular files: analog_clock.dart, digital_clock.dart, main.dart","Built and launched with Android SDK command-line tools"]},
+{id:"form",name:"Student Registration Form",repo:"student-registration-form",lang:"HTML · CSS · JavaScript",
+ tags:["HTML5","CSS3","JavaScript"],c1:"#1b1036",c2:"#7c3aed",glyph:"&lt;form&gt;",shot:"",demo:"",
+ blurb:"A responsive student registration web form with real-time client-side input validation.",
+ features:["Responsive form layout","Real-time client-side input validation"]},
+{id:"timer",name:"Web Timer",repo:"web-timer",lang:"HTML · CSS · JavaScript",
+ tags:["HTML","CSS","JavaScript"],c1:"#2a0a2a",c2:"#db2777",glyph:"00:00",shot:"",demo:"",
+ blurb:"A responsive browser-based stopwatch with custom time formatting and continuous interval tracking.",
+ features:["Responsive stopwatch interface","Custom time formatting","Continuous interval tracking"]}
+];
+/* ------------------------------------------------------------------- */
+var $=function(s){return document.querySelector(s)};
+function tags(a){return '<ul class="chips">'+a.map(function(t){return "<li>"+t+"</li>"}).join("")+"</ul>"}
+function links(p){return '<a class="btn pri" href="'+GH+p.repo+'" target="_blank" rel="noopener noreferrer" aria-label="'+p.name+' on GitHub (opens in new tab)">GitHub</a>'+(p.demo?'<a class="btn" href="'+p.demo+'" target="_blank" rel="noopener noreferrer">Live Demo</a>':"")}
+function visual(p){return '<div class="pv" style="--c1:'+p.c1+';--c2:'+p.c2+'">'+(p.shot?'<img src="'+p.shot+'" alt="Screenshot of '+p.name+'" loading="lazy">':'<span aria-hidden="true">'+p.glyph+'</span><small>Preview graphic, not a screenshot</small>')+"</div>"}
+function card(p){return '<article class="card rv">'+visual(p)+'<h3 class="pt">'+p.name+"</h3><p>"+p.blurb+"</p>"+tags(p.tags)+'<div class="row">'+links(p)+'<button class="btn" type="button" data-id="'+p.id+'">Details</button></div></article>'}
+$("#featured").innerHTML=PROJECTS.filter(function(p){return p.featured}).map(card).join("");
+$("#others").innerHTML=PROJECTS.filter(function(p){return !p.featured}).map(card).join("");
+$("#repos").innerHTML=PROJECTS.map(function(p){return '<li><a href="'+GH+p.repo+'" target="_blank" rel="noopener noreferrer">'+p.repo+"</a><span>"+p.lang+"</span></li>"}).join("");
+var dlg=$("#dlg");
+document.addEventListener("click",function(e){var b=e.target.closest("[data-id]");if(!b)return;
+ var p=PROJECTS.filter(function(x){return x.id===b.dataset.id})[0];
+ $("#dbody").innerHTML='<h3 id="dt">'+p.name+"</h3><p>"+p.blurb+"</p><h4>Key features</h4><ul class='f'>"+p.features.map(function(f){return "<li>"+f+"</li>"}).join("")+"</ul><h4>Technologies</h4>"+tags(p.tags)+'<div class="row">'+links(p)+"</div>";
+ dlg.showModal()});
+$("#dclose").onclick=function(){dlg.close()};
+dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
+/* theme */
+var root=document.documentElement,tb=$("#theme");
+function paint(){var l=root.dataset.theme==="light";$("#ticon").textContent=l?"☀":"☾";tb.setAttribute("aria-label",l?"Switch to dark theme":"Switch to light theme");
+ var m=document.querySelector('meta[name=theme-color]');if(m)m.content=l?"#faf7ff":"#07050d"}
+tb.onclick=function(){root.dataset.theme=root.dataset.theme==="light"?"dark":"light";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}paint()};
+paint();
+/* mobile menu */
+var mb=$("#menu"),nv=$("#nav");
+mb.onclick=function(){var o=nv.classList.toggle("open");mb.setAttribute("aria-expanded",o)};
+nv.addEventListener("click",function(e){if(e.target.tagName==="A"){nv.classList.remove("open");mb.setAttribute("aria-expanded","false")}});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){nv.classList.remove("open");mb.setAttribute("aria-expanded","false")}});
+/* CV: every [data-cv] link points at CV_URL */
+document.querySelectorAll("[data-cv]").forEach(function(a){a.href=CV_URL});
+$("#yr").textContent=new Date().getFullYear();
+/* reveal + active nav */
+var rv=document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});rv.forEach(function(el){io.observe(el)});
+ var links2=document.querySelectorAll("nav a"),so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links2.forEach(function(a){a.setAttribute("aria-current",a.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-45% 0px -50% 0px"});
+ document.querySelectorAll("main section[id]").forEach(function(s){so.observe(s)})}
+else rv.forEach(function(el){el.classList.add("in")});
+</script>
+</body>
+</html>
