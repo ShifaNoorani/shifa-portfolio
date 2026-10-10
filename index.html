@@ -44,6 +44,10 @@ nav a:hover,nav a[aria-current=true]{color:var(--tx);background:var(--card)}
 .ib{width:2.6rem;height:2.6rem;display:grid;place-items:center;border-radius:50%;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer;font-size:1.1rem}
 .ib:hover{box-shadow:var(--sh)}#menu{display:none}
 .hero{padding:6rem 0 4.5rem}
+.hero-in{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:2rem 4rem}
+.avatar{margin:0;justify-self:center}
+.ring{width:clamp(160px,22vw,250px);aspect-ratio:1;border-radius:50%;padding:4px;background:var(--g);box-shadow:0 0 0 8px color-mix(in srgb,var(--p) 10%,transparent),var(--sh)}
+.ring img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 25%;background:var(--bg2);border:4px solid var(--bg)}
 .hero h1{font-size:clamp(2.6rem,8vw,5rem);letter-spacing:-.03em;margin:.4rem 0 1.2rem}
 .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--mu);max-width:40rem;margin:0 0 2rem}
 .row{display:flex;flex-wrap:wrap;gap:.75rem}
@@ -90,6 +94,7 @@ dialog ul.f{margin:0 0 1rem;padding-left:1.2rem;color:var(--mu)}dialog .row{marg
 .when{color:var(--p);font-weight:600;font-size:.9rem}.card p.org{color:var(--tx);margin:0 0 1rem}
 ul.fl{margin:0 0 1rem;padding-left:1.2rem;color:var(--mu)}ul.fl li{margin-bottom:.45rem}.card p.nt{font-size:.88rem;margin:0}
 .card p.cid{font-size:.85rem}.cid span{font-family:"SFMono-Regular",Consolas,monospace;color:var(--tx)}
+@media(max-width:760px){.hero-in{grid-template-columns:1fr;justify-items:start}.avatar{justify-self:start}.ring{width:132px}}
 @media(max-width:1100px){#menu{display:grid}
 nav{position:absolute;left:0;right:0;top:100%;background:var(--bg2);border-bottom:1px solid var(--bd);display:none;padding:.5rem 1.25rem 1rem}
 nav.open{display:block}nav ul{flex-direction:column}}
@@ -117,7 +122,9 @@ nav.open{display:block}nav ul{flex-direction:column}}
 
 <main id="main">
 <section class="hero" id="top">
-<div class="wrap">
+<div class="wrap hero-in">
+<figure class="avatar rv"><div class="ring"><img src="assets/profile-photo.jpg" alt="Profile photo of Shifa Noorani" width="320" height="320" decoding="async"></div></figure>
+<div class="hero-text">
 <span class="eyebrow">BS Software Engineering · University of Sindh</span>
 <h1><span class="grad">Shifa Noorani</span></h1>
 <p class="lead">Software Engineering student building practical web and mobile applications with PHP, MySQL, JavaScript, and Flutter.</p>
@@ -128,6 +135,7 @@ nav.open{display:block}nav ul{flex-direction:column}}
 <a class="btn" href="https://www.linkedin.com/in/shifa-noorani-a7591639b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 </div>
 <ul class="chips" aria-label="Core technologies"><li>PHP</li><li>MySQL</li><li>JavaScript</li><li>Flutter</li><li>Dart</li></ul>
+</div>
 </div>
 </section>
 
@@ -164,7 +172,8 @@ nav.open{display:block}nav ul{flex-direction:column}}
 
 <section class="rv" id="github">
 <div class="wrap">
-<span class="eyebrow">GitHub</span><h2>Public repositories</h2>
+<span class="eyebrow">GitHub</span><h2>Source code repositories</h2>
+<p class="lead" style="font-size:1rem;margin-bottom:1.5rem">Project pages above explain what each project does. These repositories hold the source code.</p>
 <ul class="ghl" id="repos"></ul>
 <a class="btn pri" href="https://github.com/ShifaNoorani" target="_blank" rel="noopener noreferrer">View GitHub profile</a>
 </div>
@@ -251,7 +260,8 @@ nav.open{display:block}nav ul{flex-direction:column}}
 /* ---- EDIT HERE ---------------------------------------------------- */
 var CV_URL = "Shifa-Noorani-CV.pdf";   // keep this PDF in the same folder as index.html (or change the path here)
 var GH = "https://github.com/ShifaNoorani/";
-/* shot: path to a real screenshot (replaces the preview graphic). demo: real live URL (adds Live Demo button) */
+/* shot: path to a real screenshot (replaces the preview graphic).
+   demo: a REAL, working live URL. Adds a "View Live" button (set demoLabel:"View App" to change the label). Leave "" if there is no live version. */
 var CLOCK = '<svg viewBox="0 0 100 100" width="104" height="104" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="none" stroke="#f9a8d4" stroke-width="2.5"/><path d="M50 50V20M50 50L70 61" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><circle cx="50" cy="50" r="3.5" fill="#f472b6"/></svg>';
 var PROJECTS = [
 {id:"uni",featured:1,name:"University Website & Faculty Portal",repo:"university-website-php-mysql",lang:"PHP · MySQL",
@@ -274,16 +284,17 @@ var PROJECTS = [
 /* ------------------------------------------------------------------- */
 var $=function(s){return document.querySelector(s)};
 function tags(a){return '<ul class="chips">'+a.map(function(t){return "<li>"+t+"</li>"}).join("")+"</ul>"}
-function links(p){return '<a class="btn pri" href="'+GH+p.repo+'" target="_blank" rel="noopener noreferrer" aria-label="'+p.name+' on GitHub (opens in new tab)">GitHub</a>'+(p.demo?'<a class="btn" href="'+p.demo+'" target="_blank" rel="noopener noreferrer">Live Demo</a>':"")}
+function live(p,pri){var l=p.demoLabel||"View Live";return p.demo?'<a class="btn'+(pri?" pri":"")+'" href="'+p.demo+'" target="_blank" rel="noopener noreferrer" aria-label="'+l+': '+p.name+' (opens in new tab)">'+l+"</a>":""}
+function gh(p,pri){return '<a class="btn'+(pri?" pri":"")+'" href="'+GH+p.repo+'" target="_blank" rel="noopener noreferrer" aria-label="'+p.name+' source code on GitHub (opens in new tab)">GitHub</a>'}
 function visual(p){return '<div class="pv" style="--c1:'+p.c1+';--c2:'+p.c2+'">'+(p.shot?'<img src="'+p.shot+'" alt="Screenshot of '+p.name+'" loading="lazy">':'<span aria-hidden="true">'+p.glyph+'</span><small>Preview graphic, not a screenshot</small>')+"</div>"}
-function card(p){return '<article class="card rv">'+visual(p)+'<h3 class="pt">'+p.name+"</h3><p>"+p.blurb+"</p>"+tags(p.tags)+'<div class="row">'+links(p)+'<button class="btn" type="button" data-id="'+p.id+'">Details</button></div></article>'}
+function card(p){return '<article class="card rv">'+visual(p)+'<h3 class="pt">'+p.name+"</h3><p>"+p.blurb+"</p>"+tags(p.tags)+'<div class="row"><button class="btn pri" type="button" data-id="'+p.id+'" aria-label="View Project: '+p.name+'">View Project</button>'+live(p,0)+'</div></article>'}
 $("#featured").innerHTML=PROJECTS.filter(function(p){return p.featured}).map(card).join("");
 $("#others").innerHTML=PROJECTS.filter(function(p){return !p.featured}).map(card).join("");
 $("#repos").innerHTML=PROJECTS.map(function(p){return '<li><a href="'+GH+p.repo+'" target="_blank" rel="noopener noreferrer">'+p.repo+"</a><span>"+p.lang+"</span></li>"}).join("");
 var dlg=$("#dlg");
 document.addEventListener("click",function(e){var b=e.target.closest("[data-id]");if(!b)return;
  var p=PROJECTS.filter(function(x){return x.id===b.dataset.id})[0];
- $("#dbody").innerHTML='<h3 id="dt">'+p.name+"</h3><p>"+p.blurb+"</p><h4>Key features</h4><ul class='f'>"+p.features.map(function(f){return "<li>"+f+"</li>"}).join("")+"</ul><h4>Technologies</h4>"+tags(p.tags)+'<div class="row">'+links(p)+"</div>";
+ $("#dbody").innerHTML='<h3 id="dt">'+p.name+"</h3><p>"+p.blurb+"</p><h4>Key features</h4><ul class='f'>"+p.features.map(function(f){return "<li>"+f+"</li>"}).join("")+"</ul><h4>Technologies</h4>"+tags(p.tags)+'<div class="row">'+live(p,1)+gh(p,!p.demo)+"</div>";
  dlg.showModal()});
 $("#dclose").onclick=function(){dlg.close()};
 dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
